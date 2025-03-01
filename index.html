@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Container to hold menu items */
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Each menu item */
+        .item {
+            border: 2px solid black;
+            padding: 15px;
+            background-color: lightgray;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Title box */
+        .title {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: red;
+            color: white;
+            padding: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Different colors for each section */
+        .chicken .title { background-color: #ff6666; }
+        .beef .title { background-color: #cc0000; }
+        .sushi .title { background-color: #ffcc00; }
+
+        /* Desktop View */
+        @media (min-width: 992px) {
+            .item { width: 30%; }
+        }
+
+        /* Tablet View */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .item { width: 45%; }
+            .sushi { width: 100%; } /* Last item takes full width */
+        }
+
+        /* Mobile View */
+        @media (max-width: 767px) {
+            .item { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Menu</h1>
+    <div class="menu">
+        <div class="item chicken">
+            <div class="title">Chicken</div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum autem distinctio voluptate! Tempore voluptatum sunt suscipit doloremque delectus sapiente consequatur!</p>
+        </div>
+        <div class="item beef">
+            <div class="title">Beef</div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed repellendus atque suscipit unde. Nesciunt vero enim laudantium, incidunt similique esse.</p>
+        </div>
+        <div class="item sushi">
+            <div class="title">Sushi</div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore est doloribus possimus neque deserunt quod amet ad sequi iure dicta.</p>
+        </div>
+    </div>
+</body>
+</html>
