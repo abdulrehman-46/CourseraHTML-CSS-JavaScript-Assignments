@@ -5,88 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Menu</title>
     <style>
-        /* Basic Reset */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+        body > h1 {
             font-family: Arial, sans-serif;
-        }
-
-        body {
             text-align: center;
-            margin: 20px;
+            padding: 20px;
         }
-
+        body > div {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            padding: 20px;
+        }
         h1 {
             margin-bottom: 20px;
         }
-
-        /* Container to hold menu items */
-        .menu {
+        .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
+            max-width: 1500px;
+            margin: auto;
         }
-
-        /* Each menu item */
-        .item {
+        .box {
             border: 2px solid black;
             padding: 15px;
-            background-color: lightgray;
+            margin: 10px;
+            background-color: #988888a9;
             position: relative;
-            width: 100%;
         }
-
-        /* Title box */
-        .title {
+        .box h2 {
+            border-bottom: 1.5px solid black;
+            border-left: 1.5px solid black;
             position: absolute;
             top: 0;
             right: 0;
-            background-color: red;
-            color: white;
-            padding: 5px;
-            font-size: 16px;
-            font-weight: bold;
+            font-size-adjust: var(15px);
+            background: rgba(144, 131, 131, 0.557);
+            color: rgb(0, 0, 0);
+            padding: 1px 25px;
+            margin: 0;
         }
-
-        /* Different colors for each section */
-        .chicken .title { background-color: #ff6666; }
-        .beef .title { background-color: #cc0000; }
-        .sushi .title { background-color: #ffcc00; }
-
-        /* Desktop View */
+        .box:nth-child(1) h2 { background: #8a7b57; }
+        .box:nth-child(2) h2 { background: #673131; color: white; }
+        .box:nth-child(3) h2 { background: #cce268; }
+        
         @media (min-width: 992px) {
-            .item { width: 30%; }
+            .box {
+                width: 30%;
+            }
         }
-
-        /* Tablet View */
         @media (min-width: 768px) and (max-width: 991px) {
-            .item { width: 45%; }
-            .sushi { width: 100%; } /* Last item takes full width */
+            .box {
+                width: 45%;
+            }
+            .box:last-child {
+                width: 100%;
+            }
         }
-
-        /* Mobile View */
         @media (max-width: 767px) {
-            .item { width: 100%; }
+            .box {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <h1>Our Menu</h1>
-    <div class="menu">
-        <div class="item chicken">
-            <div class="title">Chicken</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum autem distinctio voluptate! Tempore voluptatum sunt suscipit doloremque delectus sapiente consequatur!</p>
+    <div class="container">
+        <div class="box">
+            <h2>Chicken</h2>
+            <br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis omnis veritatis ab enim nihil voluptatum eveniet. Fugit ut, voluptatibus eum necessitatibus dignissimos nobis, consectetur pariatur mollitia quo id labore veritatis rerum iusto, rem dolor ex. Voluptate tempora aut corrupti exercitationem.</p>
         </div>
-        <div class="item beef">
-            <div class="title">Beef</div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed repellendus atque suscipit unde. Nesciunt vero enim laudantium, incidunt similique esse.</p>
+        <div class="box">
+            <h2>Beef</h2>
+            <br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis omnis veritatis ab enim nihil voluptatum eveniet. Fugit ut, voluptatibus eum necessitatibus dignissimos nobis, consectetur pariatur mollitia quo id labore veritatis rerum iusto, rem dolor ex. Voluptate tempora aut corrupti exercitationem.</p>
         </div>
-        <div class="item sushi">
-            <div class="title">Sushi</div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore est doloribus possimus neque deserunt quod amet ad sequi iure dicta.</p>
+        <div class="box">
+            <h2>Sushi</h2>
+            <br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis omnis veritatis ab enim nihil voluptatum eveniet. Fugit ut, voluptatibus eum necessitatibus dignissimos nobis, consectetur pariatur mollitia quo id labore veritatis rerum iusto, rem dolor ex. Voluptate tempora aut corrupti exercitationem.</p>
         </div>
     </div>
 </body>
