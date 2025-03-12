@@ -1,1 +1,1 @@
-# CourseraModule2-Assignment
+# CourseraHTML,CSS,JavaScript-Assignment
